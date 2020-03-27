@@ -1,0 +1,48 @@
+{
+	"darren": {
+		"id": "darren",
+		"speech": "Darren",
+		"images": {
+			"bust": "darren.png"
+		}
+	},
+	"nyrah": {
+		"id": "nyrah",
+		"speech": "Nyrah",
+		"images": {
+			"bust": "nyrah.png"
+		}
+	},
+	"liber": {
+		"id": "liber",
+		"speech": "Liber"
+	},
+	"qWynne": {
+		"id": "qWynne",
+		"speech": "Queen Winterwynne"
+	},
+	"kWynne": {
+		"id": "kWynne",
+		"speech": "King Winterwynne"
+	},
+	"elvin": {
+		"id": "elvin",
+		"speech": "Elvin"
+	},
+	"karla": {
+		"id": "karla",
+		"speech": "Karla"
+	},
+	"kuno": {
+		"id": "kuno",
+		"speech": "Kuno"
+	},
+	"leila": {
+		"id": "leila",
+		"speech": "Leila"
+	},
+	"remi": {
+		"id": "remi",
+		"speech": "Remi"
+	}
+}

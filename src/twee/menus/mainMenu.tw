@@ -1,0 +1,37 @@
+:: mainMenu [nosave]
+
+<div id="background-filler"></div>
+
+<div id="game-title">
+	<img src="media/images/game-title_1280x720.png">
+</div>
+
+<div id="menu-items">
+
+	<div title="Start a new game" id="new-game-link" class="material-button">
+		<i class="material-icons">fiber_new</i>
+	</div>
+
+	<div title="Game Saves" id="saves-link" class="material-button">
+		<i class="material-icons">bookmarks</i>
+	</div>
+
+	<div title="Open Settings" id="pause-link" class="material-button">
+		<i class="material-icons">pause</i>
+	</div>
+
+</div>
+
+<div id="game-version">
+	<i class="emoji"> 💛📰 </i>
+	<<button "News">>
+		<<script>>
+			Dialog.setup("News", "game-news");
+			Dialog.wiki(Story.get("game-news").processText());
+			Dialog.open();
+		<</script>>
+	<</button>>
+	<i class="emoji"> 📰💛 </i>
+	<br>
+	v<<= Game.version.number>> - <<= Game.version.name>>
+</div>

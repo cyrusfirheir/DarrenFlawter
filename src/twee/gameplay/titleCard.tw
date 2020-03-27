@@ -1,0 +1,40 @@
+:: titleCard
+
+<<set _ch = setup.chapters[$currentChapter].titleCard>>
+
+<div id="title-container">
+	<div id="chapter-number">
+		_ch[0]
+	</div>
+	<div id="chapter-name">
+		_ch[1]
+	</div>
+</div>
+
+<<timed 0s>>
+	<<script>>
+		let tl_number = anime.timeline({
+				targets: "#title-container div",
+				delay: anime.stagger(1900)
+			});
+		tl_number
+			.add({
+					translateY: "-2em",
+					scale: 0,
+					duration: 0
+				}, "-=1900")
+			.add({
+					translateY: "2em",
+					scale: 2,
+					duration: 2000,
+					easing: "cubicBezier(0.000, 0.950, 1.000, 0.050)"
+				})
+			.add({
+					opacity: 0,
+					duration: 250,
+					easing: "cubicBezier(0.000, 0.000, 1.000, 0.050)"
+				}, "-=2250");
+	<</script>>
+<<next 4s>>
+	<<run loadScene($continuePassage)>>
+<</timed>>

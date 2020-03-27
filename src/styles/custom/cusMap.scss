@@ -1,0 +1,32 @@
+
+@import "../variables";
+
+.sa_workshop {
+	&#map-background {
+		background-color: #100000;
+	}
+
+	&#map {
+		.map-cell {
+			border-color: transparentize($color: red, $amount: 0.85);
+
+			&.wall {
+				background-color: transparentize($color: red, $amount: 0.75);
+			}
+
+			&.exit {
+				border-color: red;
+				color: red;
+			}
+
+			&.invisible {
+				border-color: transparent;
+				background: none;
+			}
+
+			&.player {
+				border-color: $sD;
+			}
+		}
+	}
+}

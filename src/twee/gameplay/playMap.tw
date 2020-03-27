@@ -1,0 +1,59 @@
+:: playMap
+
+<<run $(":root").addClass("loading-content")>>
+<<set Game.input.movement = false>>
+<div id="loading-cover" class="closed"></div>
+
+<<= bm.drawMap($curMap)>>
+
+<div id="map-ui">
+	<div id="cur-block-name">
+		<div class="content"></div>
+	</div>
+	<div id="cur-block-desc">
+		<div class="content"></div>
+	</div>
+	<div id="cur-block-acts">
+		<div class="content"></div>
+	</div>
+	<div id="movement-buttons">
+		<div id="p-move-up" class="material-button">
+			<i class="material-icons">arrow_drop_up</i>
+		</div>
+		<div id="p-move-left" class="material-button">
+			<i class="material-icons">arrow_left</i>
+		</div>
+		<div id="p-move-right" class="material-button">
+			<i class="material-icons">arrow_right</i>
+		</div>
+		<div id="p-move-down" class="material-button">
+			<i class="material-icons">arrow_drop_down</i>
+		</div>
+	</div>
+	<div id="game-status-bar">
+		<div class="content"></div>
+		<div title="Game Saves" id="saves-link" class="material-button">
+			<i class="material-icons">bookmarks</i>
+		</div>
+		<div title="Open Settings" id="pause-link" class="material-button">
+			<i class="material-icons">pause</i>
+		</div>
+	</div>
+</div>
+
+<<timed 500ms>>
+	<<script>>
+		variables().curPos = recall("pCurPos", variables().curPos);
+
+		if (variables().curPos) bm.pMoveCoords(variables().curPos, true);
+		else bm.pMove("up", 0);
+
+		setup.zoomLevel = variables().curMap.zoom;
+		bm.mapZoom(setup.zoomLevel);
+
+		$(":root").removeClass("loading-content");
+		$("#loading-cover").removeClass("closed");
+
+		Game.input.movement = true;
+	<</script>>
+<</timed>>

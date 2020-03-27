@@ -1,0 +1,25 @@
+
+@import "variables";
+
+#title-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	perspective: 20rem;
+
+	div {
+		line-height: 0;
+		text-align: center;
+		font-size: 5rem;
+		font-family: $fTitle;
+
+		&#chapter-number {
+			font-size: 7rem;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+:: tbc
+
+@ [] {sign center}
+	<<set $tbc = true>>
+	<br> <i>To be continued...</i> <br>
+	It is strongly recommended you create a save at this point — preferably export it as a file. <i>The lovelies of Skylark</i> was designed with backwards compatibility in mind, so you will be able to continue from this point onwards on the next update without a hitch.
+	<br>
+	<<if Story.has(Game.tbc)>>
+		<<run loadScene(Game.tbc)>>
+	<</if>>

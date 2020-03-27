@@ -1,0 +1,36 @@
+:: saveMenu
+
+<div class="material-button close-menu close-menu-link">
+	<i class="material-icons">close</i>
+</div>
+
+<div id="save-menu-container">
+
+	<div id="save-to-file">
+		<h6>
+			All of the Save/Load/Delete methods work without any confirmation prompts, and <i>will</i> overwrite old files if name conflicts arise. Proceed with caution.<br><br>
+		</h6>
+		<<if !Story.get(passage()).tags.includes("nosave")>>
+			<h6>
+				Enter filename for new save (will be modified to comply with valid naming scheme)<br>
+				Leave blank for default name: flawter_[date-time-string]
+			</h6>
+			<div id="save-to-file-buttons">
+				<input type="text" id="game-save-name">
+				<button class="game-save-acts game-save-new button-material-icon">
+					<div>
+						<i class="material-icons">save</i>
+					</div>
+					Save
+				</button>
+				</div>
+		<</if>>
+	</div>
+
+	<div id="saves-container"></div>
+
+</div>
+
+<<timed 0s>>
+	<<run $(document).trigger(":files-modded")>>
+<</timed>>

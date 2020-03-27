@@ -1,0 +1,169 @@
+:: prologue_00
+
+@ Darren
+	Not again!!!
+
+@
+	With a face twisted enough to make it seem like he wanted to cry, the twenty-year-old rubbed his eyes.
+
+@ Darren
+	Why in God's name would he disappear right after sending a summon for me?
+
+@
+	He was already groggy from Merwin's party last night, the alcohol having done its job, and his father's antics weren't helping <i>one</i> bit.
+
+@ Assistant Mev
+	You should perhaps try the greenhouse, Young Master?
+	He did mention needing a fresh batch of some plant extract.
+
+@ Darren
+	Don't you grow tired of him just vanishing without telling you where he's headed to?
+
+@
+	The other man smiled, shaking his head.
+
+@ Assistant Mev
+	It's not my place to question his whereabouts, Young Master.
+	It <i>is</i> difficult, sometimes, certainly, but...
+	You know how he is, don't you?
+
+@ Darren
+	Yeah...
+
+@
+	Sighing, Darren ran a hand through his hair.
+	He left the lab with a nod to Mev, hurrying along the corridors of the palace, hoping to catch his father before he evaporated yet again.
+	It was a well known fact that Liber Flawter, the greatest potion brewer in the history of the world, was an eccentric who didn't answer to anyone.
+	The man was so very above it, that even Royalty had been compelled to sway to his wishes.
+	But as fairy-tale-ish it may sound, the only way he could be brought under some semblance of control, was a woman... Darren's mother.
+	Nyrah (Winterwynne) Flawter was yet another force of nature. A force strong enough to play against the likes of Liber.
+	Being the youngest, and the only daughter of the King, she had been treated special right from her birth.
+	But despite the Royal family trying their best to spoil the child with other things, Nyrah had picked the sword.
+	And deceiving an entire retinue of guards, the reckless nineteen-year-old had snuck into the Seventh war of Kingdoms.
+	It was there, in a random encounter between two undercover lunatics, where Darren's mother had met his father.
+	She was just another foot soldier, but had too much fire in her to be normal, and he was just another water boy, but knew too much about poisons and antidotes than he should.
+	The pair had found a connection, something which drew their young selves closer to each other faster than the Sun showed up after a night.
+	Both were hiding from the King. One wanted to serve her country instead of being married off to some prince of some other land, the other wanted to stay free instead of being played like a fiddle by Royalty.
+	But somehow, Nyrah managed to convince Liber that freedom wouldn't exist without the Kingdom.
+	They needed to win the war.
+	Both of them returned to the capital, Nyrah taking all the flak for running away, and then presenting Liber in court as an ally, reducing her punishment by a small margin.
+	But Liber didn't go down that easy, no... In exchange for his help, he asked for something which caused quite the scene.
+	"I want Nyrah."
+	It was only when the Princess herself broke the Royal Guard's backs with her kicks for trying to force Liber down to the ground, that everyone realized it had already been decided.
+	"No one, touches what's mine..."
+
+@ Darren
+	It's almost as if they're made for each other.
+
+@
+	He shook his head, smiling, thinking of just how crazy his parents were.
+
+@ ||
+	<<run loadScene("prologue_01")>>
+
+
+
+:: prologue_01
+
+@ Darren
+	FATHER! Are you here?
+
+@
+	Being someone who didn't vocalize that much, Darren startled himself with how loud his shout was.
+	He stood there, at the entryway to the greenhouse, scratching his head.
+
+@ Liber
+	Darren? Is that you?
+
+@
+	The older male's voice carried over from somewhere up ahead, but Darren decided against moving further into the labyrinth of strange plants.
+	And before he could confirm his identity, Liber appeared before the boy.
+
+@ Liber
+	Hah! It <i>is</i> you!
+
+@ Darren
+	...
+	Who else would refer to you as their father?
+
+@ Liber
+	Huh? Do you want siblings? Now? Well I guess we could try...
+	Won't it be awkward for you? You're grown up and all...
+
+@
+	Sometimes, Darren wished he could pound some sense into his father amidst a bout of wrestling.
+	But he knew that would be useless too. Liber would just drink some pain killer and go on his merry way, learning nothing.
+
+@ Darren
+	Why are you like this...
+
+@ Liber
+	Anyway, I'll talk to your mother about it later.
+
+@ Darren
+	Please don't.
+
+@ Liber
+	Eh? But didn't you say- Nevermind...
+
+@ Darren
+	You asked for me, here I am. Now tell me what you summoned me for before you spirited away.
+
+@
+	Liber's eyes widened as if he just remembered that little tidbit.
+
+@ Liber
+	Oh... Hehe... Sorry about that.
+	You see, I needed some merylline bark.
+
+@ Darren
+	It's- It's fine...
+
+@
+	Perhaps the man noticed his son's growing ire, and got straight to the point.
+
+@ Liber
+	I wanted to talk to you about something.
+	Come on, let's walk towards to the servant quarters. I heard someone was sick there.
+
+@
+	Darren followed his father, hands in his pockets, waiting for more words to come out of Liber's mouth.
+
+@ Liber
+	Do you remember what you'd told us a few weeks ago? When your mother asked you what you wished for? The night of your birthday?
+
+@
+	The boy frowned, parting his lips to say something before he shut it once more when his father continued.
+
+@ Liber
+	We were worried, you know?
+	What you said wasn't fitting of someone your age with so much more to do in life.
+
+@
+	Darren recalled the night, him watching the stars as he laid on the carpet in his mother's balcony, head on her lap as she played with his hair.
+	He'd drunk quite a lot, mostly thanks to Merwin, but also because he'd felt sadder than ever that day.
+	His father was sitting nearby, leaning against a wall with a goblet of his own, waiting.
+	It was a special tradition between the three... Every year on Darren's birthday, they would spend the last few hours before midnight relaxing under the moonlit sky, and when the hour of Darren's birth came along, the boy would make a wish.
+	This year, the youngster had simply asked for a more interesting life.
+	Darren was sure it was the alcohol, but when questioned about why he wanted what he did, he just couldn't stop talking.
+	"I feel like I'm wasting away," he'd said.
+	He was the child of the strongest power couple in the world, an existence watched over by the nobles in hopes of gaining the favor of his parents.
+	He was the Queen's favorite grandkid, to the point where she'd made it mandatory for him to have lunch with her every day.
+	He outperformed each one of his peers in academics, and put up a heavy competition when it came to combat.
+	He got along everyone around him, be it shy palace maids, or the uptight soldiers of the Royal guard.
+	But... Everything felt like it was pointless.
+	It wasn't like he'd ever sit on the throne. His mother had herself written and signed a declaration that her lineage would never touch the seat of power.
+	She was smart, and though he didn't know how far down the line this would work the way she'd wanted to, he was grateful for not having to worry about being stabbed in the back.
+	But not being able to be King wasn't why he was sad, no... Darren was dissatisfied with his life because there was nothing to do in the palace.
+	Everything going nice and smooth was quite the goal to look up to, but living that life? For twenty long years? Without experiencing challenges even once?
+	That was what he longed for; adventure.
+	Even if it lasted only a day, he wanted to live for himself.
+	Darren wanted to try the life of legends he'd read about in history.
+	He couldn't just ditch everything and leave. That was something his parents could've done in a heartbeat, but not him. So he'd long since convinced himself that he was fated to continue on like this.
+	That was until he'd spilled it all on the night of his birthday and now his father had something to say about it...
+
+@ Liber
+	Say, Darren... What do you think about Skylark?
+
+@ ||
+	<<run loadScene("prologue_02")>>

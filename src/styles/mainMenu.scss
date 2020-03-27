@@ -1,0 +1,80 @@
+
+@import "variables";
+
+#game-title {
+	position: fixed;
+	z-index: 1000;
+	top: 3rem;
+	left: 0;
+	right: 0;
+	bottom: 10rem;
+	text-align: center;
+	filter: drop-shadow(0 0 0.25rem $shD);
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	@media (orientation:portrait) {
+		bottom: 12rem;
+	}
+}
+
+#menu-items {
+	position: fixed;
+	z-index: 1500;
+	left: 0;
+	right: 0;
+	bottom: 5rem;
+	height: 5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	@media (orientation:portrait) {
+		height: 7rem;
+		justify-content: space-evenly;
+		.material-button {
+			width: 5rem;
+		  height: 5rem;
+			padding: 1rem;
+			.material-icons {
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+#game-version {
+	position: fixed;
+	z-index: 1200;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 5rem;
+	text-align: center;
+	text-shadow: 0 0 0.25rem $fD;
+	button {
+		background-color: $bD;
+		&:hover {
+			background-color: $b;
+		}
+	}
+}
+
+#background-filler {
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("media/images/background-repeat.png");
+	background-repeat: repeat;
+	background-size: 250px 250px;
+	opacity: 0.25;
+  animation: back-pattern-shift 10s linear infinite;
+}
+
+@keyframes back-pattern-shift {
+  100% { background-position: 250px 250px; }
+}

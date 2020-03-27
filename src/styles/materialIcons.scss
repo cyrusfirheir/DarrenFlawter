@@ -1,0 +1,87 @@
+
+@import "variables";
+
+/*
+** Modified from:
+** https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp
+*/
+
+@font-face {
+  font-family: 'Material Icons Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url("media/fonts/material-icons/round.woff2") format('woff2');
+}
+
+.material-icons {
+	pointer-events: none;
+  font-family: 'Material Icons Round';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-button {
+  width: 3rem;
+  height: 3rem;
+
+	display: inline-block;
+	vertical-align: middle;
+
+	transition: background-color 0.1s ease;
+
+  box-shadow: 0 0 1rem $shD;
+  &:hover {
+    background-color: $b;
+    box-shadow: 0 0 2rem $sh;
+  }
+
+  cursor: pointer;
+  pointer-events: all;
+
+	border-radius: 50%;
+
+	text-shadow: 0 0 2px $shD;
+	background: $bS;
+	border: 1px solid $fD;
+	backdrop-filter: none;
+
+	margin: 0;
+  padding: calc(0.5rem - 1px);
+
+	&.mini {
+		width: 2rem;
+		height: 2rem;
+		padding: calc(0.25rem - 1px);
+
+		.material-icons {
+			font-size: 1.5rem;
+		}
+	}
+
+  text-align: center;
+
+  .material-icons {
+    font-size: 2rem;
+  }
+}
+
+.fancy-gfx {
+	.material-button:not(.close-menu) {
+		background: transparent;
+		backdrop-filter: blur(0.25em) brightness(0.75) contrast(0.75);
+		box-shadow: 0 0 1rem $fD;
+		&:hover {
+	    box-shadow: 0 0 2rem $fD;
+	  }
+	}
+}

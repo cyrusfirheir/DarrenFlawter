@@ -1,0 +1,265 @@
+
+@import "variables";
+
+#loading-cover {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $bS;
+	pointer-events: none;
+	opacity: 0;
+
+	transition: all 0.1s ease;
+
+	&.closed {
+		opacity: 1;
+	}
+}
+
+#map-background {
+	position: fixed;
+	z-index: 900;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $bS;
+}
+
+#map-container {
+
+	*, *::before, *::after {
+	  box-sizing: border-box;
+	}
+
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (2 - 1.5) * ((100vw - 300px) / (1600 - 300)));
+	transform-origin: 50% 40%;
+	transition: transform 0.1s ease;
+	pointer-events: none;
+}
+
+#map {
+	position: fixed;
+	z-index: 1200;
+	width: auto;
+	height: auto;
+	line-height: 0;
+	padding: 0.5em;
+	transition: all 0.1s ease;
+
+	.map-cell {
+		position: relative;
+		z-index: 1500;
+		display: inline-block;
+		width: 3em;
+		height: 3em;
+		margin: 0.25em;
+		border: 0.15em solid $b;
+		border-radius: 1em;
+		transition: border-color 1s ease;
+
+		.content {
+			position: absolute;
+			display: inline-block;
+			top: -0.15em;
+			left: -0.15em;
+			width: inherit;
+			height: inherit;
+			padding: 0.5em;
+
+			.material-icons {
+				font-size: 2em;
+			}
+		}
+
+		&.wall {
+			border-color: $bD;
+			background-color: $b;
+		}
+
+		&.exit {
+			border-color: $fD;
+			color: $fD;
+		}
+
+		&.invisible {
+			border-color: transparent;
+			background: none;
+		}
+
+		&.player {
+			border-color: $sD;
+			transition: border-color 0s;
+
+			background: repeating-linear-gradient(-45deg, $sD 0 1em, $sS 1em 2em);
+      background-size: 200% 200%;
+			animation: player-pattern-shift 1s ease infinite;
+		}
+	}
+}
+
+@keyframes player-pattern-shift {
+	100% { background-position: 100% 100%; }
+}
+
+#map-ui {
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (2 - 1.5) * ((100vw - 300px) / (1600 - 300)));
+
+	div {
+		pointer-events: all;
+	}
+
+	#cur-block-name, #cur-block-desc, #cur-block-acts, #game-status-bar {
+		position: fixed;
+		z-index: 2200;
+		background: $bS;
+		box-shadow: 0 0 1em $shD;
+		backdrop-filter: none;
+	}
+
+	#cur-block-name {
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2.5em;
+		padding: 0.5em;
+
+		border-bottom: 0.15em solid $fD;
+
+		.content {
+			text-align: center;
+			font-style: italic;
+			font-weight: bold;
+			overflow-y: auto;
+		}
+	}
+
+	#game-status-bar {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2.5em;
+		padding: 0.5em;
+
+		border-top: 0.15em solid $fD;
+
+		.content {
+			text-align: center;
+			font-style: italic;
+			font-weight: bold;
+			overflow-y: auto;
+		}
+	}
+
+	#cur-block-desc {
+		top: 4em;
+		left: 0em;
+		width: 30%;
+		bottom: 4em;
+		padding: 0.5em 0.75em;
+		overflow-y: auto;
+
+		border-right: 0.15em solid $fD;
+
+		.content {
+			font-size: 0.8em;
+		}
+	}
+
+	#cur-block-acts {
+		top: 4em;
+		right: 0em;
+		width: 30%;
+		bottom: 4em;
+		padding: 0.5em 0.75em;
+		overflow-y: auto;
+
+		border-left: 0.15em solid $fD;
+
+		.content {
+			font-size: 0.8em;
+			a {
+				display: block;
+				pointer-events: all;
+				width: 100%;
+				margin: 0.25em 0;
+				text-align: right;
+			}
+		}
+	}
+
+	#movement-buttons {
+		position: fixed;
+		z-index: 2500;
+		top: 40%;
+		left: 50%;
+
+		.material-button {
+			position: absolute;
+		}
+
+		#p-move-up {
+			left: -1.5em;
+			bottom: 2.5em;
+		}
+		#p-move-left {
+			top: -1.5em;
+			right: 2.5em;
+		}
+		#p-move-right {
+			top: -1.5em;
+			left: 2.5em;
+		}
+		#p-move-down {
+			left: -1.5em;
+			top: 2.5em;
+		}
+	}
+}
+
+.fancy-gfx {
+	#map-ui {
+		#cur-block-name, #cur-block-desc, #cur-block-acts, #game-status-bar {
+			background: transparent;
+			backdrop-filter: blur(0.25em) brightness(0.5);
+		}
+		#cur-block-name {
+			background-image: linear-gradient(180deg, $shD, transparent);
+		}
+		#cur-block-desc {
+			background-image: linear-gradient(90deg, $shD, transparent);
+		}
+		#cur-block-acts {
+			background-image: linear-gradient(-90deg, $shD, transparent);
+		}
+		#game-status-bar {
+			background-image: linear-gradient(0deg, $shD, transparent);
+		}
+	}
+}
+
+.loading-content {
+	#map {
+		.map-cell {
+			transition: all 0s;
+		}
+	}
+}

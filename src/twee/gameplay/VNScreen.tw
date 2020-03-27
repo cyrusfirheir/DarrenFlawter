@@ -1,0 +1,31 @@
+:: VNScreenTransition [autosave]
+<<goto "VNScreen">>
+
+
+:: VNScreen
+
+<div class="text-log">
+	<<= $log.join("")>>
+</div>
+
+<div id="lobar">
+
+	<div title="Game Saves" id="saves-link" class="material-button">
+		<i class="material-icons">bookmarks</i>
+	</div>
+
+	<div title="Continue" id="advance-scene-link" class="material-button">
+		<i class="material-icons">play_arrow</i>
+	</div>
+
+	<div title="Open Settings" id="pause-link" class="material-button">
+		<i class="material-icons">pause</i>
+	</div>
+
+</div>
+
+
+<<timed 200ms>>
+	<<run advanceScene(true)>>
+	<<run textboxCheck()>>
+<</timed>>

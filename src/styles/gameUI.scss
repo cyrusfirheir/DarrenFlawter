@@ -1,0 +1,28 @@
+
+@import "variables";
+
+.close-menu {
+	position: fixed;
+	z-index: 6000;
+	top: 1rem;
+	right: 1rem;
+
+	background-color: $aD;
+	color: $shD;
+
+	&:hover {
+		background-color: $aDD;
+	}
+}
+
+#saves-link {
+	position: fixed;
+	left: 1rem;
+	bottom: 1rem;
+}
+
+#pause-link {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+}

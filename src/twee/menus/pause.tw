@@ -1,0 +1,26 @@
+:: pauseMenu
+
+<div id="pause-menu-container">
+
+	<button class="close-menu-link">Resume</button>
+
+	<<button "Saves">>
+		<<run Engine.play("saveMenu", true)>>
+	<</button>>
+
+	<<button "Quit to Main Menu">>
+		<<run Engine.restart()>>
+	<</button>>
+
+	<<button "Quit to Desktop">>
+		<<run window.close()>>
+	<</button>>
+
+	<hr>
+
+	<div class="game-setting toggle">
+		<div>Fancy graphics (blurs and translucent panels)</div>
+		<<= settingToggleButton("fancyGfx")>>
+	</div>
+
+</div>

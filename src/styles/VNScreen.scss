@@ -1,0 +1,211 @@
+
+@import "variables";
+
+.text-log {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+	padding: 4rem 10rem 5rem;
+	@media screen and (orientation: portrait) {
+		padding: 4rem 2rem 5rem;
+	}
+}
+
+#lobar {
+	position: fixed;
+	z-index: 1500;
+	pointer-events: none;
+	left: 0;
+	right: 0;
+	height: 4rem;
+	bottom: 0;
+	background: linear-gradient(transparent, $sh);
+
+	.material-button {
+		margin: 0;
+	}
+}
+
+#advance-scene-link {
+	position: fixed;
+	left: calc(50% - 1.5rem);
+	bottom: 1rem;
+}
+
+fieldset.displayed-text {
+	position: relative;
+	padding: 0;
+	border: none;
+
+	animation: fade-in 0.5s ease;
+
+	legend {
+		position: absolute;
+		margin-left: 5rem;
+		top: 0.5rem;
+		padding: 0 0.5rem;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		border-left: 0.15rem solid $pD;
+		background-color: $b;
+
+		&.right {
+			right: 0;
+			border: none;
+			border-right: 0.15rem solid $pD;
+		}
+
+		&.choice {
+			border-color: $bD;
+		}
+
+		&.call {
+			animation: call-shiver 3s linear infinite;
+		}
+
+		&.pc {
+			border-color: $sD;
+		}
+	}
+
+	div {
+		padding: 0.5rem 1rem;
+		margin-left: 5rem;
+
+		&.char-bust {
+			position: absolute;
+			display: inline-block;
+			top: 0.75rem;
+			left: 0;
+			width: 4.5rem;
+			height: 4.5rem;
+			margin: 0;
+			padding: 0;
+			background-color: $pD;
+			border: 0.15em solid $pS;
+			border-radius: 50%;
+			&.pc {
+				background-color: $sD;
+				border-color: $sS;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&.speech, &.continued-speech {
+			background-color: $b;
+			border-left: 0.15rem solid $pD;
+			margin: 1.5rem 0;
+			margin-left: 5rem;
+			padding: 1rem 1.5rem;
+
+			&.right {
+				border: none;
+				border-right: 0.15rem solid $pD;
+			}
+
+			&.call {
+				animation: call-shiver 2s linear infinite;
+			}
+
+			&.pc {
+				border-color: $sD;
+			}
+
+			&.thought {
+				font-style: italic;
+				background: linear-gradient(90deg, $b, transparent);
+			}
+		}
+
+		&.continued-speech {
+			margin-top: -1rem;
+		}
+
+		&.center {
+			text-align: center;
+			text-align-last: center;
+		}
+		&.right {
+			text-align: right;
+			text-align-last: right;
+		}
+		&.justify {
+			text-align: justify;
+		}
+
+		&.sign {
+			margin: 2rem;
+			margin-left: 7rem;
+			padding: 1rem;
+			background-color: $bD;
+		}
+
+		&.choice {
+			margin: 1.5rem 0;
+			margin-left: 5rem;
+			background-color: $b;
+			border-left: 0.15rem solid $bD;
+			border-right: 0.15rem solid $bD;
+			a {
+				width: 100%;
+			}
+
+			.selected-choice {
+				border: 0.15rem solid $s;
+				background-color: $bS;
+				padding: 0.5rem 1rem;
+				margin: 1rem 0;
+			}
+		}
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes call-shiver {
+	0% {
+		opacity: 1;
+		filter: sepia(0);
+		transform: translate(0px, 0px);
+	}
+	5% {
+		opacity: 0.8;
+		filter: sepia(0.5);
+		transform: translate(1px, 0px);
+	}
+	20% {
+		opacity: 1;
+		filter: sepia(0.2);
+		transform: translate(0px, -1px);
+	}
+	80% {
+		opacity: 1;
+		filter: sepia(0.2);
+		transform: translate(1px, 0px);
+	}
+	95% {
+		opacity: 0.8;
+		filter: sepia(0.5);
+		transform: translate(1px, -1px);
+	}
+	100% {
+		opacity: 1;
+		filter: sepia(0);
+		transform: translate(1px, 0px);
+	}
+}

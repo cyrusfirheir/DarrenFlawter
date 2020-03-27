@@ -1,0 +1,24 @@
+:: StoryInit
+
+<<set $log = []>>
+<<set $stack = []>>
+
+<<set $tbc = false>>
+
+<<set setup.chapters = [
+	{
+		saveString: "Prologue",
+		titleCard: ["Once upon a time,", "In a land far away..."]
+	},
+	{
+		saveString: "One",
+		titleCard: ["Chapter One", "Those queasy of the Sea"]
+	}
+]>>
+<<set $currentChapter = 0>>
+<<set $currentLocation = "The Winterwynne Palace">>
+<<set $continuePassage = "prologue_00">>
+
+<<set $curPos = "">>
+
+<<run charInit()>>

@@ -1,0 +1,85 @@
+
+@import "variables";
+
+input[type=text], input.macro-textbox {
+	display: block;
+	margin: 1rem;
+  border: 0.15rem solid $bD;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+  background-color: transparent;
+  color: $fD;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $fD;
+  }
+
+  &:active, &:focus {
+		background-color: transparent;
+    border-color: $bD;
+  }
+}
+
+.toggle-button {
+	code {
+		display: none;
+	}
+
+	position: relative;
+	width: 3.5rem;
+	height: 1.75rem;
+	border: 0.15rem solid $bD;
+	margin-left: 3rem;
+	border-radius: 1rem;
+	transition: all 0.1s ease;
+
+	.toggle-button-value {
+		position: absolute;
+		top: 0.35rem;
+		right: calc(100% + 0.5rem);
+		line-height: 1;
+		pointer-events: none;
+	}
+
+	.toggle-button-knob {
+		position: absolute;
+		top: -0.25rem;
+		left: -0.25rem;
+		right: auto;
+		width: 2rem;
+		height: 2rem;
+		background-color: $b;
+		border: 0.15rem solid $bD;
+		border-radius: 50%;
+		transition: all 0.1s ease;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: $b;
+		.toggle-button-knob {
+			background-color: $bD;
+		}
+	}
+
+	&.toggle-on {
+		background-color: $aSD;
+		border-color: $aS;
+
+		.toggle-button-knob {
+			left: auto;
+			right: -0.25rem;
+			background-color: $aS;
+			border-color: $aS;
+		}
+
+		&:hover {
+			background-color: transparent;
+			.toggle-button-knob {
+				background-color: $aSD;
+			}
+		}
+	}
+}

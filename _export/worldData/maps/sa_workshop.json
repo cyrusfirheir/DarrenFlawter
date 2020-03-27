@@ -1,0 +1,154 @@
+{
+	"id": "sa_workshop",
+	"size": {
+		"rows": 7,
+		"cols": 7
+	},
+	"zoom": 180,
+	"cssClass": "sa_workshop",
+	"_default": {
+		"name": "The workshop",
+		"desc": "Besides all the pieces of metal and wood and the absence of space to stand without stepping on scrap, it's pretty neat...\n\nAn array of beautiful battle-axes spreads across the walls on the left of this place, each one of them with probably a century worth of history to boast. Then to the right, there are circular workbenches with countless little projects littering the tops. Most of which, are wooden.\n\nAnd straight ahead, lies the forge, beside a huge board stuck to the wall with requests from people in and around the Academy, for things of all kinds to be made by the smith that lives here."
+	},
+	"r0c0": {
+		"cssClass": "solid invisible"
+	},
+	"r0c1": {
+		"cssClass": "solid wall"
+	},
+	"r0c2": {
+		"cssClass": "solid invisible"
+	},
+	"r0c3": {
+		"cssClass": "solid invisible"
+	},
+	"r0c4": {
+		"cssClass": "exit",
+		"content": " <i class=\"material-icons\"\nstyle=\"transform: rotate(-90deg)\"\n>double_arrow</i>",
+		"trig": [
+			{
+				"id": "exit",
+				"content": "<<run bm.gotoMap(\"sa_workshop_store\")>>"
+			}
+		]
+	},
+	"r0c5": {
+		"cssClass": "solid wall"
+	},
+	"r0c6": {
+		"cssClass": "solid invisible"
+	},
+	"r1c0": {
+		"cssClass": "solid wall"
+	},
+	"r1c1": {
+		"content": "<i class=\"material-icons\">whatshot</i>",
+		"css": "color: red;\ntext-shadow: 0 0 0.5em red;\nbox-shadow: 0 0 5em 1em red;",
+		"name": "The forge",
+		"desc": "Cursed fire from the worst corner of hell blazes away in this furnace every hour of the day. When left unsupervised, it's a pathway for the creatures of mischief to jump through.\n\nIt doesn't happen often, though. The Master blacksmith keeps this fire busy with his near endless stream of metal that he needs to make the finest of weapons.\n\nThings made here get tagged with, \"From Hell,\" and the makers take pride in that. Not everyone gets to say that, you know?"
+	},
+	"r1c2": {
+		"cssClass": "wall notif",
+		"content": "<i class=\"material-icons\">view_list</i>",
+		"acts": [
+			{
+				"id": "reqCheck",
+				"content": "<<link \"Check requests\">>\n\n<</link>>"
+			}
+		]
+	},
+	"r1c3": {
+		"cssClass": "solid wall"
+	},
+	"r1c5": {
+		"content": "<i class=\"material-icons\">table_chart</i>",
+		"css": "color: #6a4940;\ntext-shadow: 3px -1px 0.5em black;",
+		"name": "The chest of Infinity",
+		"desc": "A portal to another dimension, this chest is, \"An enigma,\" as described by the person in charge of it... No one knows who made it, where it came from, but just that it can store whatever you want inside it. It works like a vault of some kind, and presents only things the user has put into it themselves."
+	},
+	"r1c6": {
+		"cssClass": "solid wall"
+	},
+	"r2c0": {
+		"cssClass": "solid wall"
+	},
+	"r2c2": {
+		"cssClass": "player"
+	},
+	"r2c6": {
+		"cssClass": "solid wall"
+	},
+	"r3c0": {
+		"cssClass": "solid wall"
+	},
+	"r3c1": {
+		"content": "<i class=\"material-icons\">gavel</i>",
+		"css": "color: #6a4940;\ntext-shadow: 0px 2px 0.5em black;",
+		"name": "The hammer of Ramril",
+		"desc": "Like most of the things in this space, this hammer is nothing ordinary. Initially believed to have fallen from the heavens itself as the wrath of gods during the first war of kingdoms, this artifact pretty much brought the already weakening forces to a complete halt. The leaders signed peace treaties, afraid of being struck again by something so big.\n\nOnly until a year later did they find out that the hammer belonged to a giant from the North, Ramril Ossenwad. The clumsy behemoth had tossed his hammer in the wrong direction during his coming of age ceremony...\n\nUnfortunately for those who'd begun worshiping the hammer, Ramril claimed his possession back and went on his merry way. Until he slipped and fell down a cliff, the hammer going off somewhere else again...\n\nThe story goes on and on and on, Ramril travelling in search of his hammer, and then finding it for mere moments before losing it again.\n\nThe actual tool wore down and somehow became smaller over time, but now that Ramril's dead, it's being put to use by the workshop."
+	},
+	"r3c4": {
+		"content": "<i class=\"material-icons\">scatter_plot</i>",
+		"css": "color: #6a4940;\ntext-shadow: 1px 2px 0.5em black;",
+		"name": "Workbenches",
+		"desc": "Ranging from cutesy dragon figurines, to papers which look like the schematics for big gearwheel machines, there's no dearth of curious things here. But even if they're strewn about almost carelessly, there's a bold sign with the words, \"DO NOT TOUCH,\" placed on the top."
+	},
+	"r3c5": {
+		"cssClass": "solid wall"
+	},
+	"r3c6": {
+		"cssClass": "invisible"
+	},
+	"r4c0": {
+		"cssClass": "solid invisible"
+	},
+	"r4c1": {
+		"cssClass": "solid wall"
+	},
+	"r4c4": {
+		"content": "<i class=\"material-icons\">bubble_chart</i>",
+		"css": "color: #6a4940;\ntext-shadow: 1px 3px 0.5em black;",
+		"name": "Workbenches",
+		"desc": "Ranging from cutesy dragon figurines, to papers which look like the schematics for big gearwheel machines, there's no dearth of curious things here. But even if they're strewn about almost carelessly, there's a bold sign with the words, \"DO NOT TOUCH,\" placed on the top."
+	},
+	"r4c5": {
+		"cssClass": "solid wall"
+	},
+	"r4c6": {
+		"cssClass": "solid invisible"
+	},
+	"r5c0": {
+		"cssClass": "solid wall"
+	},
+	"r5c4": {
+		"cssClass": "solid wall"
+	},
+	"r5c5": {
+		"cssClass": "solid invisible"
+	},
+	"r5c6": {
+		"cssClass": "solid invisible"
+	},
+	"r6c0": {
+		"cssClass": "solid invisible"
+	},
+	"r6c1": {
+		"cssClass": "solid wall"
+	},
+	"r6c2": {
+		"cssClass": "exit",
+		"content": "<i class=\"material-icons\"\nstyle=\"transform: rotate(90deg)\"\n>double_arrow</i>"
+	},
+	"r6c3": {
+		"cssClass": "solid wall"
+	},
+	"r6c4": {
+		"cssClass": "solid invisible"
+	},
+	"r6c5": {
+		"cssClass": "solid invisible"
+	},
+	"r6c6": {
+		"cssClass": "solid invisible"
+	}
+}

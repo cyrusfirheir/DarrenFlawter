@@ -1,0 +1,69 @@
+{
+	"id": "sa_workshop_store",
+	"size": {
+		"rows": 4,
+		"cols": 4
+	},
+	"zoom": 225,
+	"cssClass": "sa_workshop",
+	"_default": {
+		"name": "The storage closet",
+		"desc": "A tight, packed room with boxes and crates of raw materials laying around. There's a big keyhole in the wall up ahead, marking the otherwise nondescript lock which guards a safe of some sort. It's supposedly empty."
+	},
+	"r0c0": {
+		"cssClass": "solid wall"
+	},
+	"r0c1": {
+		"cssClass": "solid wall",
+		"content": "<i class=\"material-icons\"\nstyle=\"transform: scale(0.5) translateY(0.5em)\"\n>lock</i>",
+		"css": "color: #6a4940;"
+	},
+	"r0c2": {
+		"cssClass": "solid wall"
+	},
+	"r0c3": {
+		"cssClass": "solid wall"
+	},
+	"r1c0": {
+		"cssClass": "solid wall"
+	},
+	"r1c2": {
+		"content": "<i class=\"material-icons\"\nstyle=\"transform: rotate(-90deg)\"\n>dashboard</i>",
+		"css": "color: #6a4940;"
+	},
+	"r1c3": {
+		"cssClass": "solid wall"
+	},
+	"r2c0": {
+		"cssClass": "solid wall"
+	},
+	"r2c1": {
+		"content": "<i class=\"material-icons\"\nstyle=\"transform: rotate(0deg)\"\n>dashboard</i>",
+		"css": "color: #6a4940;"
+	},
+	"r2c2": {
+		"cssClass": "player"
+	},
+	"r2c3": {
+		"cssClass": "solid wall"
+	},
+	"r3c0": {
+		"cssClass": "solid wall"
+	},
+	"r3c1": {
+		"cssClass": "solid wall"
+	},
+	"r3c2": {
+		"content": "<i class=\"material-icons\"\nstyle=\"transform: rotate(90deg)\"\n>double_arrow</i>",
+		"cssClass": "exit",
+		"trig": [
+			{
+				"id": "exit",
+				"content": "<<run bm.gotoMap(\"sa_workshop\", \"r1c4\")>>"
+			}
+		]
+	},
+	"r3c3": {
+		"cssClass": "solid wall"
+	}
+}

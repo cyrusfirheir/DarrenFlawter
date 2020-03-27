@@ -1,0 +1,21 @@
+:: StoryTitle
+The lovelies of Skylark
+
+:: StoryData
+{
+	"ifid": "494AE278-5016-48E8-AC14-546CC70E4D45",
+	"format": "SugarCube",
+	"format-version": "2.30.0"
+}
+
+:: Start
+
+/* <<goto "mainMenu">> */
+
+<<run loadScene("prologue_00")>>
+
+/* <<run bm.gotoMap("sa_workshop")>> */
+
+/* <<goto "titleCard">> */
+
+/* <<goto "pauseMenu">> */
